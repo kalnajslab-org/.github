@@ -1,9 +1,10 @@
 # Kalnaslab-org
-Organization for the LASP Kalnajs Team
+GitHub Organization for the LASP Kalnajs Team
 
 ## Teensy Firmware Quickstart
 
-1. Create(if necessary) *Sketchbook/* and *Sketchbook/libraries/* directories.
+1. Create *Sketchbook/* and *Sketchbook/libraries/* directories.
+   (You may already have this as *~/Documents/Arduino/* or some other Sketchbook directory).
 1. Clone the main applications (e.g. *StratoCore_LPC.git*) into *Sketchbook/*.
 1. For ArduinoIDE:
     1. Clone LASP support libraries (e.g. *StrateolXML.git*) into *Sketchbook/libraries/*.
