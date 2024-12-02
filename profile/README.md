@@ -14,7 +14,7 @@ GitHub Organization for the LASP Kalnajs Team
         1. Use library manager to install standard libraries (e.g. *TinyGPSPlus*).
     1. Open the *.ino* file (e.g. *StratoCore_LPC.ino*) in ArduinoIDE.
 1. For PlatformIO:
-    1. Create a *main.cpp* link in */src* to the *.ino* file.
+    1. Create a *.cpp* link in */src* to the *.ino* file. (E.g. *src/StratoCore_LPC.cpp -> ../StratoCore_LPC.ino*)
 1. To switch back to ArduinioIDE from PlatformIO:
     1. Remove *src/main.cpp* and *.pio/* 
 
@@ -91,7 +91,7 @@ Sketchbook/
 
 There are a couple of PlatformIO items which cause the ArduinoIDE to
 go bonkers. So:
-1. Remove the *main.cpp* link that you may have made for working with PlatformIO.
+1. Remove the *src/.cpp* link that you may have made for working with PlatformIO.
 2. Remove the *.pio* directory.
 
 Now you should be able to run the ArduinoIDE, open the *.ino* file, and build/upload/monitor the
@@ -101,11 +101,12 @@ application.
 
 The main program for our application is the *.ino* file at the top level of the
 repository. PlatformIO doesn't expect here to be a source file here, and so it will
-not compile it, leading to link errors. So we create a bogus link which makes it visible 
+not compile it, leading to link errors. So we create a link which makes it visible 
 to the dependency scanner (e.g.):
 
 ```sh
-ln -s StratoCore_RATS.ino src/main.cpp
+cd src
+ln -s ../StratoCore_RATS.ino StratoCore_RATS.cpp
 ```
 
 Library requirements are specified in *platformio.ini*, and they are
