@@ -45,29 +45,29 @@ We support two firmware development environments:
   environment, including rigourous configuration definitions, Intellisense, Git integration,
   and more.
 
-With a few workarounds, the kalnajslab-orb repositories can be used in either environment. A
+With a few workarounds, the kalnajslab-org repositories can be used in either environment. A
 workflow is documented here which describes how to do this.
 
 ### Prerequisites
 
 1. We use a directory structure that will accomodate both techniques.
-   Create a top level directory, which will be your *<Sketchbook>* location.
+   Create a top level directory, which will be the *Sketchbook* location.
    (You may already have one, typically *~/Documents/Arduino/*.) Add a *libraries/* sub-directory:
 ```sh
-<Sketchbook>/ 
-            |
-            libraries/
+Sketchbook/ 
+          |
+          --libraries/
 ```
 1. Run the ArduinoIDE. Open the *Settings*, and set the Sketchbook path to your
-   *<Sketchbook>* directory.
-1. Our application repositories will be checked out into the *<Sketchbook>* directory.
+   *Sketchbook* directory.
+1. Our application repositories will be checked out into the *Sketchbook/* directory.
 1. Libraries for ArduinoIDE will be located in the *libraries/* directory;
    they are searched by that tool. These will be populated
    from any of:
    - The ArduinoIDE library manager.
    - `git clone` of one of our repositories.
    - Unzipping of a library zip file.
-1. Clone the application (e.g.*StratoCore_RATS*) to the *<Sketchbook>* directory.
+1. Clone the application (e.g.*StratoCore_RATS*) to the *Sketchbook* directory.
 
 ### ArduinoIDE
 
@@ -94,7 +94,7 @@ Library requirements are specified in *platformio.ini*, and they are
 fetched automagically, so that *libraries/* is ignored by PlatformIO.
 
 PlatformIO creates the *.pio/* tree to hold all of the build artifacts.
-as mentioned above, this tree and *src/main.cpp*, give ArduinoIDE great 
+As mentioned above, this tree and *src/main.cpp*, give ArduinoIDE great 
 indigestion. and they are removed as necessary. 
 
 
