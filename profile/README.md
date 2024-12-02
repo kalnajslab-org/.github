@@ -16,7 +16,7 @@ GitHub Organization for the LASP Kalnajs Team
 1. For PlatformIO:
     1. Create a *main.cpp* link in */src* to the *.ino* file.
 1. To switch back to ArduinioIDE from PlatformIO:
-    1. Remove *src/main.cpp* and */.pio* 
+    1. Remove *src/main.cpp* and *.pio/* 
 
 ## Repositories Overview
 
