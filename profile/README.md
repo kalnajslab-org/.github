@@ -1,7 +1,23 @@
 # Kalnaslab-org
 Organization for the LASP Kalnajs Team
 
-## Instrument Repository Dependencies
+## Teensy Firmware Quickstart
+
+1. Create(if necessary) *Sketchbook/* and *Sketchbook/libraries/* directories.
+1. Clone the main applications (e.g. *StratoCore_LPC.git*) into *Sketchbook/*.
+1. For ArduinoIDE:
+    1. Clone LASP support libraries (e.g. *StrateolXML.git*) into *Sketchbook/libraries/*.
+    1. Unzip ZIP libraries (e.g. *StratoCore_LPC/zips/\*.zip*) into *Sketchbook/libraries/*.
+    1. From ArduinoIDE:
+        1. In *Settings*, set Sketchbook location to *Sketchbook/*.
+        1. Use library manager to install standard libraries (e.g. *TinyGPSPlus*).
+    1. Open the *.ino* file (e.g. *StratoCore_LPC.ino*) in ArduinoIDE.
+1. For PlatformIO:
+    1. Create a *main.cpp* link in */src* to the *.ino* file.
+1. To switch back to ArduinioIDE from PlatformIO:
+    1. Remove *src/main.cpp* and */.pio* 
+
+## Repositories Overview
 
 ### Laser Particle Counter (LPC)
 Main Board:
