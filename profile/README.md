@@ -82,8 +82,8 @@ application.
 
 The main program for our application is the *.ino* file at the top level of the
 repository. PlatformIO doesn't expect here to be a source file here, and so it will
-not compile it, leading to link errors. So we create a link which makes it visible 
-to the dependenct scanner (e.g.):
+not compile it, leading to link errors. So we create a bogus link which makes it visible 
+to the dependency scanner (e.g.):
 
 ```sh
 ln -s StratoCore_RATS.ino src/main.cpp
