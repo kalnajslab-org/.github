@@ -50,29 +50,30 @@ workflow is documented here which describes how to do this.
 
 ### Prerequisites
 
-1. Create a directory structure that will accomodate both techniques. ArduinioIDE is the one that
-is most particular. Create a top level directory, which will be your *Sketchbook* location.
-You may already have one, typically *~/Documents/Arduino/*. Add a *libraries* sub-directory:
+1. We use a directory structure that will accomodate both techniques.
+   Create a top level directory, which will be your *<Sketchbook>* location.
+   (You may already have one, typically *~/Documents/Arduino/*.) Add a *libraries/* sub-directory:
 ```sh
-<Sketchbook>/ --
-           |
-           -> libraries/
+<Sketchbook>/ 
+            |
+            libraries/
 ```
 1. Run the ArduinoIDE. Open the *Settings*, and set the Sketchbook path to your
-   *Sketchbook* directory.
-1. Our application repositories will be checked out into the *Sketchbook* directory.
-1. Libraries will be located in the *libraries/* directory. These can be populated
+   *<Sketchbook>* directory.
+1. Our application repositories will be checked out into the *<Sketchbook>* directory.
+1. Libraries for ArduinoIDE will be located in the *libraries/* directory;
+   they are searched by that tool. These will be populated
    from any of:
-   - The ArduinoIDE library manager
-   - `git clone` of one of our repositories
-   - Unzipping of a library file.
+   - The ArduinoIDE library manager.
+   - `git clone` of one of our repositories.
+   - Unzipping of a library zip file.
 1. Clone the application (e.g.*StratoCore_RATS*) to the *<Sketchbook>* directory.
 
 ### ArduinoIDE
 
-There are a couple of PlatformIO items which will cause the ArduinoIDE to
-go bonkers:
-1. Remove the *main.cpp* link that you may have made for working with PlatformIO
+There are a couple of PlatformIO items which cause the ArduinoIDE to
+go bonkers. So:
+1. Remove the *main.cpp* link that you may have made for working with PlatformIO.
 2. Remove the *.pio* directory.
 
 Now you should be able to run the ArduinoIDE, open the *.ino* file, and build/upload/monitor the
@@ -93,7 +94,7 @@ Library requirements are specified in *platformio.ini*, and they are
 fetched automagically, so that *libraries/* is ignored by PlatformIO.
 
 PlatformIO creates the *.pio/* tree to hold all of the build artifacts.
-This, along with *src/main.cpp*, gives ArduinoIDE great indigestion. 
+as mentioned above, this tree and *src/main.cpp*, give ArduinoIDE great 
+indigestion. and they are removed as necessary. 
 
-So, when we wantto use the ArduinoIDE, ***we simply delete _src/main.cpp_ and _.pio_/***.
 
