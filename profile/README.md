@@ -25,6 +25,7 @@ Main Board:
 1. StratoCore_LPC
 2. StratoCore
 3. StrateoXML
+4. StratoLinduino
 5. RS41
 
 Particle Counter:
