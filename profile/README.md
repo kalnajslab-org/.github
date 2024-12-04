@@ -96,6 +96,10 @@ go bonkers. So:
 Now you should be able to run the ArduinoIDE, open the *.ino* file, and build/upload/monitor the
 application.
 
+If you get an `The sketch file 'TinyGPS++.cpp' cannot be used.` error when
+opening the sketch, then you have not removed *.pio/*. If you get missing
+header files, then you have not removed the *.cpp* link.
+
 Note that in some cases, ArduinoIDE works fine for main application located in
 *Sketchbook/*. But there is at least one case (*MCB_T4.1*), where this doesn't
 work because the *Technosoft* library references a header file in *MCB_T4.1*.
@@ -112,6 +116,8 @@ to the dependency scanner (e.g.):
 cd src
 ln -s ../StratoCore_RATS.ino StratoCore_RATS.cpp
 ```
+If you get an `undefined reference to 'loop'` error during the build,
+then you have not added the *.cpp* link to the *.ino* file.
 
 Library requirements are specified in *platformio.ini*, and they are
 fetched automagically, so that *libraries/* is ignored by PlatformIO.
