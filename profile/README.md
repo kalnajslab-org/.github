@@ -5,7 +5,7 @@ GitHub Organization for the LASP Kalnajs Team
 
 1. Create *Sketchbook/* and *Sketchbook/libraries/* directories.
    (You may already have this as *~/Documents/Arduino/* or some other Sketchbook directory).
-1. Clone the main applications (e.g. *StratoCore_LPC.git*) into *Sketchbook/*.
+1. Clone the main applications (e.g. *StratoCore_LPC.git*) into *Sketchbook/libraries/*.
 1. For ArduinoIDE:
     1. Clone LASP support libraries (e.g. *StrateolXML.git*) into *Sketchbook/libraries/*.
     1. Unzip ZIP libraries (e.g. *StratoCore_LPC/zips/\*.zip*) into *Sketchbook/libraries/*.
@@ -16,9 +16,10 @@ GitHub Organization for the LASP Kalnajs Team
 1. For PlatformIO:
     1. Create a *.cpp* link in */src* to the *.ino* file. (E.g. *src/StratoCore_LPC.cpp -> ../StratoCore_LPC.ino*)
 1. To switch back to ArduinioIDE from PlatformIO:
-    1. Remove *src/main.cpp* and *.pio/* 
+    1. Remove *src/main.cpp*
+    2. Remove *.pio/* 
 
-## Repositories Overview
+## Repositories Summary
 
 ### Laser Particle Counter (LPC)
 Main Board:
@@ -78,14 +79,12 @@ Sketchbook/
 ```
 1. Run the ArduinoIDE. Open the *Settings*, and set the Sketchbook path to your
    *Sketchbook* directory.
-1. Our application repositories will be checked out into the *Sketchbook/* directory.
-1. Libraries for ArduinoIDE will be located in the *libraries/* directory;
-   they are searched by that tool. These will be populated
-   from any of:
+1. Libraries for ArduinoIDE will be located in the *Sketchbook/libraries/*;
+   they are searched by that tool. These will be populated from any of:
    - The ArduinoIDE library manager.
    - `git clone` of one of our repositories.
    - Unzipping of a library zip file.
-1. Clone the application (e.g.*StratoCore_RATS*) to the *Sketchbook* directory.
+1. Clone the applications (e.g.*StratoCore_RATS*) into *Sketchbook/libraries/*.
 
 ### ArduinoIDE
 
@@ -96,6 +95,11 @@ go bonkers. So:
 
 Now you should be able to run the ArduinoIDE, open the *.ino* file, and build/upload/monitor the
 application.
+
+Note that in some cases, ArduinoIDE works fine for main application located in
+*Sketchbook/*. But there is at least one case (*MCB_T4.1*), where this doesn't
+work because the *Technosoft* library references a header file in *MCB_T4.1*.
+So just stick main apps and libraries in *Sketchbook/libraries/*.
 
 ### PlatformIO
 
