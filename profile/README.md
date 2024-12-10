@@ -1,7 +1,7 @@
 # Kalnaslab-org
 GitHub Organization for the LASP Kalnajs Team.
 
-[All Repositories]([https://github.com/kalnajslab-org/repositories](https://github.com/orgs/kalnajslab-org/repositories))
+[All Repositories](https://github.com/kalnajslab-org/repositories)
 
 ## Teensy Firmware Quickstart
 
