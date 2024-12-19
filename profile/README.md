@@ -8,18 +8,21 @@ GitHub Organization for the LASP Kalnajs Team.
 1. Create *Sketchbook/* and *Sketchbook/libraries/* directories.
    (You may already have this as *~/Documents/Arduino/* or some other Sketchbook directory).
 1. Clone the main applications (e.g. *StratoCore_LPC.git*) into *Sketchbook/libraries/*.
-1. For ArduinoIDE:
-    1. Clone LASP support libraries (e.g. *StrateolXML.git*) into *Sketchbook/libraries/*.
-    1. Unzip ZIP libraries (e.g. *StratoCore_LPC/zips/\*.zip*) into *Sketchbook/libraries/*.
-    1. From ArduinoIDE:
-        1. In *Settings*, set Sketchbook location to *Sketchbook/*.
-        1. Use library manager to install standard libraries (e.g. *TinyGPSPlus*).
-    1. Open the *.ino* file (e.g. *StratoCore_LPC.ino*) in ArduinoIDE.
-1. For PlatformIO:
-    1. Create a *.cpp* link in */src* to the *.ino* file. (E.g. *src/StratoCore_LPC.cpp -> ../StratoCore_LPC.ino*)
+1. Setup the build environment:
+    1. For ArduinoIDE:
+        1. Clone LASP support libraries (e.g. *StrateolXML.git*) into *Sketchbook/libraries/*.
+        1. Unzip ZIP libraries (e.g. *StratoCore_LPC/zips/\*.zip*) into *Sketchbook/libraries/*.
+        1. From ArduinoIDE:
+            1. In *Settings*, set Sketchbook location to *Sketchbook/*.
+            1. Use library manager to install standard libraries (e.g. *TinyGPSPlus*).
+        1. Open the *.ino* file (e.g. *StratoCore_LPC.ino*) in ArduinoIDE.
+    1. For PlatformIO:
+        1. Create a *.cpp* link in */src* to the *.ino* file. (E.g. *src/StratoCore_LPC.cpp -> ../StratoCore_LPC.ino*)
 1. To switch back to ArduinioIDE from PlatformIO:
     1. Remove *src/main.cpp*
     2. Remove *.pio/* 
+
+More [ArduinoIDE details](#arduinoide) and [PlatformIO details](#platformio) are found below.
 
 ## Repositories Summary
 
