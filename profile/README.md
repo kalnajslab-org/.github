@@ -109,6 +109,8 @@ So just stick main apps and libraries in *Sketchbook/libraries/*.
 
 ### PlatformIO
 
+#### Project Setup
+
 The main program for our application is the *.ino* file at the top level of the
 repository. PlatformIO doesn't expect here to be a source file here, and so it will
 not compile it, leading to link errors. So we create a link which makes it visible 
@@ -122,10 +124,27 @@ If you get an `undefined reference to 'loop'` error during the build,
 then you have not added the *.cpp* link to the *.ino* file.
 
 Library requirements are specified in *platformio.ini*, and they are
-fetched automagically, so that *libraries/* is ignored by PlatformIO.
+fetched automagically, so that our *libraries/* directory (for ArduinoIDE
+operatiomns) is not relevant to PlatformIO.
 
 PlatformIO creates the *.pio/* tree to hold all of the build artifacts.
 As mentioned above, this tree and *src/main.cpp*, give ArduinoIDE great 
 indigestion. and they are removed as necessary. 
+
+#### Upload Ports
+
+It turns out that _upload_port_ parameter doesn't work with the uploader that Teensy 
+provides. This means that the following _platformio.ini_ parameter does nothing:
+```
+  upload_port=/dev/cu.usbmodem165659901
+```
+You'll just have to live with unplugging all Teensies except the one that
+you want to program. See this [issue](https://github.com/platformio/platform-teensy/issues/44).
+
+
+The good news is that _monitor_port_ does seem to work:
+```
+  monitor_port=/dev/cu.usbmodem165659901
+```
 
 
