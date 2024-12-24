@@ -112,27 +112,43 @@ So just stick main apps and libraries in *Sketchbook/libraries/*.
 
 ### PlatformIO
 
-#### Project Setup
+#### PlatformIO IDE
+- Open VSCode
+- Install the PlatfromIO extension.
+
+That should be it. An "alien" button will appear on the left toolbar, and
+"house" and "camera" buttons will appear on the bottom status bar.
+
+- Alien button: Will bring up Project Task choices, where you can clean, build, upload, etc.
+- House button: This opens PlatformIO automation. I haven't found it very useful.
+- Camera button: This opens a dropdown selector at the top of the window, where you can
+  choose the built target of choice. We generally don't have more than one target.
+  But, for MCB_T4.1 (for example), there are targets for either a RACHUTS or RATS MCB
+  build.
+  
+#### Instrument Project Setup
 
 The main program for our application is the *.ino* file at the top level of the
-repository. PlatformIO doesn't expect here to be a source file here, and so it will
-not compile it, leading to link errors. So we create a link which makes it visible 
-to the dependency scanner (e.g.):
+repository. PlatformIO doesn't expect a source file to be here, and so it will
+not compile it, leading to linker errors. So we create a symbolic link which makes 
+it visible to the dependency scanner (e.g.):
 
 ```sh
-cd src
-ln -s ../StratoCore_RATS.ino StratoCore_RATS.cpp
+cd src; ln -s ../StratoCore_RATS.ino StratoCore_RATS.cpp
 ```
-If you get an `undefined reference to 'loop'` error during the build,
+If you get an `undefined reference to 'setup'` error during the build,
 then you have not added the *.cpp* link to the *.ino* file.
 
 Library requirements are specified in *platformio.ini*, and they are
-fetched automagically, so that our *libraries/* directory (for ArduinoIDE
-operatiomns) is not relevant to PlatformIO.
+fetched automagically. Thus the *libraries/* directory (for the ArduinoIDE
+workflow) is not relevant to PlatformIO. 
 
 PlatformIO creates the *.pio/* tree to hold all of the build artifacts.
-As mentioned above, this tree and *src/main.cpp*, give ArduinoIDE great 
-indigestion. and they are removed as necessary. 
+All library references are downloaded from the PlatformIO repo or 
+GitHu, into *.pio/libdeps/<env>/*
+
+As mentioned above, the *.pio/* tree and *src/main.cpp*, give ArduinoIDE great 
+indigestion, and they are removed as necessary. 
 
 #### Upload Ports
 
