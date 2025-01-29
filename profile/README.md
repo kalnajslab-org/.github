@@ -5,10 +5,13 @@ GitHub Organization for the LASP Kalnajs Team.
 
 ## Teensy Firmware Quickstart
 
-1. Create *Sketchbook/* and *Sketchbook/libraries/* directories.
-   (You may already have this as *~/Documents/Arduino/* or some other Sketchbook directory).
-1. Clone the main applications (e.g. *StratoCore_LPC.git*) into *Sketchbook/libraries/*.
-1. Setup the build environment:
+_We have decided it will be simpler just to use separate Git repository clones for each of the
+development environments. You can use either one._
+
+1. If using the ArduinoIDE build environment:
+    1. Create *Sketchbook/* and *Sketchbook/libraries/* directories.
+       (You may already have this as *~/Documents/Arduino/* or some other Sketchbook directory).
+    1. Clone the main applications (e.g. *StratoCore_LPC.git*) into *Sketchbook/libraries/*.
     1. For ArduinoIDE:
         1. Clone LASP support libraries (e.g. *StrateolXML.git*) into *Sketchbook/libraries/*.
         1. Unzip ZIP libraries (e.g. *StratoCore_LPC/zips/\*.zip*) into *Sketchbook/libraries/*.
@@ -16,11 +19,10 @@ GitHub Organization for the LASP Kalnajs Team.
             1. In *Settings*, set Sketchbook location to *Sketchbook/*.
             1. Use library manager to install standard libraries (e.g. *TinyGPSPlus*).
         1. Open the *.ino* file (e.g. *StratoCore_LPC.ino*) in ArduinoIDE.
-    1. For PlatformIO:
-        1. Create a *.cpp* link in */src* to the *.ino* file. (E.g. *src/StratoCore_LPC.cpp -> ../StratoCore_LPC.ino*)
-1. To switch back to ArduinioIDE from PlatformIO:
-    1. Remove *src/main.cpp*
-    2. Remove *.pio/* 
+1. If using the PlatformIO build environment:
+   1. Clone the main application (e.g. *StratoCore_LPC.git*) into whatever directory you are using
+      for StratoCore PlatformIO development.
+   1. Create a *.cpp* link in */src* to the *.ino* file. (E.g. *src/StratoCore_LPC.cpp -> ../StratoCore_LPC.ino*)
 
 More [ArduinoIDE details](#arduinoide) and [PlatformIO details](#platformio) are found below.
 
@@ -114,7 +116,8 @@ So just stick main apps and libraries in *Sketchbook/libraries/*.
 
 #### PlatformIO IDE
 - Open VSCode
-- Install the PlatfromIO extension.
+- Install the PlatformIO extension.
+- Extra credit: Install the excellent Serial Monitor extension from Microsoft.
 
 That should be it. An "alien" button will appear on the left toolbar, and
 "house" and "camera" buttons will appear on the bottom status bar.
@@ -126,10 +129,11 @@ That should be it. An "alien" button will appear on the left toolbar, and
   But, for MCB_T4.1 (for example), there are targets for either a RACHUTS or RATS MCB
   build.
   
-#### Instrument Project Setup
+#### StratoCore Instrument Project Setup
 
 The main program for our application is the *.ino* file at the top level of the
-repository. PlatformIO doesn't expect a source file to be here, and so it will
+repository. _setup()_ and _loop()_ live here, and because
+PlatformIO doesn't expect a source file to be here, it will
 not compile it, leading to linker errors. So we create a symbolic link which makes 
 it visible to the dependency scanner (e.g.):
 
@@ -140,30 +144,63 @@ If you get an `undefined reference to 'setup'` error during the build,
 then you have not added the *.cpp* link to the *.ino* file.
 
 Library requirements are specified in *platformio.ini*, and they are
-fetched automagically. Thus the *libraries/* directory (for the ArduinoIDE
-workflow) is not relevant to PlatformIO. 
+fetched automagically.
 
 PlatformIO creates the *.pio/* tree to hold all of the build artifacts.
 All library references are downloaded from the PlatformIO repo or 
-GitHu, into *.pio/libdeps/<env>/*
+GitHub, into *.pio/libdeps/<env>/*.
 
 As mentioned above, the *.pio/* tree and *src/main.cpp*, give ArduinoIDE great 
-indigestion, and they are removed as necessary. 
+indigestion, and they are removed if you want to use the same git repo clone with
+both environments. 
 
-#### Upload Ports
+#### Editing Library Dependencies (IMPORTANT)
 
-It turns out that _upload_port_ parameter doesn't work with the uploader that Teensy 
+The StratoCore application _platformio.ini_ lists libraries which are downloaded
+from GitHub (or other places). During most development we will only be editing the
+application source code that has been cloned into _src/_. But sometimes
+we may want to make changes to a library. It's a bit convoluted to do this.
+The issue is how to commit your edits.
+
+The process is to open the source code that has been cloned by PlatformIO
+into _.pio/libdeps/<env_name>/<library_name>_. The easiest way to find
+the code is to right-click on the function call in the app code, 
+navigate to the definition, and edit/build/test.
+
+Edits will appear in the VSCode Source Control pane, and you can
+commit them from here. _BUT if you do a PlatformIO "Clean All",
+before commiting and pushing, you will loose all of your edits._
+This is because "Clean All" erases everything in _.pio/_. (A
+simple "Clean" is OK).
+
+#### Environments and platformio.ini
+
+PlatformIO has the concept of _environments_, which are much like
+build targets. They are defined by _[env:name]_ sections in 
+_platformio.ini_. We use them to customize builds for specific purposes,
+e.g customizing the MCB firmware between RATS, RACHUTS and FLOATS,
+or building firmware that shares the log and Zephyr ports.
+
+It is not very obvious, but there is an environment chooser button at
+the _bottom_ of the VSCode window, which opens a chooser at the _top_ of the
+VSCode window! If you have (say) 2 environments defined, it will offer you both of them, as well
+as _Default_. Selecting an environment causes it to appear in the Alien panel. 
+Selecting _Default_ causes all of them to appear in the Alien panel, as well
+as a top one where you can build all targets at once.
+
+#### Upload and Monitor Ports
+
+It turns out that _upload_port_ parameter doesn't seem to work with the uploader that Teensy 
 provides. This means that the following _platformio.ini_ parameter does nothing:
 ```
   upload_port=/dev/cu.usbmodem165659901
 ```
-You'll just have to live with unplugging all Teensies except the one that
-you want to program. See this [issue](https://github.com/platformio/platform-teensy/issues/44).
+See this [issue](https://github.com/platformio/platform-teensy/issues/44).
 
+But there is a very handy port selector, once again at the _bottom_ of VSCode_, which
+(once again) opens a selector at the _top_ of VSCode. It is initially set to _Auto_;
+just change it to the correct port and uploads/monitors will work, and you can leave
+multiple Teensies plugged in.
 
-The good news is that _monitor_port_ does seem to work:
-```
-  monitor_port=/dev/cu.usbmodem165659901
-```
-
-
+Just make sure that you have the correct one chosen, otherwise you may flash the MCB
+with the StratoCore_LPC code and vice versa!
