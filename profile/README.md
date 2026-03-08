@@ -17,7 +17,6 @@ GitHub Organization for the LASP Kalnajs Team.
 | [ECU](https://github.com/kalnajslab-org/ECU) | End Control Unit firmware for the RATS tether reel system |
 | [MCB_T4.1](https://github.com/kalnajslab-org/MCB_T4.1) | Motor Control Board firmware for RATS/RACHUTS, updated for Teensy 4.1 |
 | [MCB](https://github.com/kalnajslab-org/MCB) | Motor Control Board firmware for the RACHUTS MonDo reel board |
-| [PUCode](https://github.com/kalnajslab-org/PUCode) | Pump Unit firmware for the FLOATS instrument |
 | [RS41](https://github.com/kalnajslab-org/RS41) | Support library for the Vaisala RS41 radiosonde |
 
 ### Core Firmware Libraries
@@ -28,6 +27,7 @@ GitHub Organization for the LASP Kalnajs Team.
 | [StrateoleXML](https://github.com/kalnajslab-org/StrateoleXML) | XML-based communications library for interfacing with the CNES Zephyr OBC |
 | [ECUcomm](https://github.com/kalnajslab-org/ECUcomm) | LoRa-based communications protocol between the RATS ECU and main board |
 | [MCBComm](https://github.com/kalnajslab-org/MCBComm) | Communications protocol library for the Motor Control Board |
+| [PUCode](https://github.com/kalnajslab-org/PUCode) | Communications protocol between the Profiling Unit and RACHUTS |
 | [SerialComm](https://github.com/kalnajslab-org/SerialComm) | Simple, robust protocol and class for inter-Arduino UART communication |
 | [SerialComm-LarsObsolete](https://github.com/kalnajslab-org/SerialComm-LarsObsolete) | Obsolete version of SerialComm, retained for reference |
 | [SafeBuffer](https://github.com/kalnajslab-org/SafeBuffer) | Bounds-checked buffer library for embedded C++ |
