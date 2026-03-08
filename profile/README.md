@@ -3,6 +3,77 @@ GitHub Organization for the LASP Kalnajs Team.
 
 [All Repositories](https://github.com/orgs/kalnajslab-org/repositories)
 
+## Repositories
+
+### Instrument Applications
+
+| Repository | Description |
+|---|---|
+| [StratoCore_LPC](https://github.com/kalnajslab-org/StratoCore_LPC) | Main board application for the Laser Particle Counter |
+| [StratoCore_RATS](https://github.com/kalnajslab-org/StratoCore_RATS) | Main board application for the Reel-down Aerosol and Temperature Sampler |
+| [StratoCore_RACHUTS](https://github.com/kalnajslab-org/StratoCore_RACHUTS) | Main board application for the RAdiative and CHemical composition Using Tethered Sondes |
+| [StratoCore_FLOATS](https://github.com/kalnajslab-org/StratoCore_FLOATS) | Main board application for the FLOATS instrument |
+| [PHA_V5_1](https://github.com/kalnajslab-org/PHA_V5_1) | Pulse Height Analyzer firmware for the LPC particle counter board |
+| [ECU](https://github.com/kalnajslab-org/ECU) | End Control Unit firmware for the RATS tether reel system |
+| [MCB_T4.1](https://github.com/kalnajslab-org/MCB_T4.1) | Motor Control Board firmware for RATS/RACHUTS, updated for Teensy 4.1 |
+| [MCB](https://github.com/kalnajslab-org/MCB) | Motor Control Board firmware for the RACHUTS MonDo reel board |
+| [PUCode](https://github.com/kalnajslab-org/PUCode) | Pump Unit firmware for the FLOATS instrument |
+| [RS41](https://github.com/kalnajslab-org/RS41) | Support library for the Vaisala RS41 radiosonde |
+
+### Core Firmware Libraries
+
+| Repository | Description |
+|---|---|
+| [StratoCore](https://github.com/kalnajslab-org/StratoCore) | Core framework for all LASP Stratéole 2 instrument main boards |
+| [StrateoleXML](https://github.com/kalnajslab-org/StrateoleXML) | XML-based communications library for interfacing with the CNES Zephyr OBC |
+| [ECUcomm](https://github.com/kalnajslab-org/ECUcomm) | LoRa-based communications protocol between the RATS ECU and main board |
+| [MCBComm](https://github.com/kalnajslab-org/MCBComm) | Communications protocol library for the Motor Control Board |
+| [SerialComm](https://github.com/kalnajslab-org/SerialComm) | Simple, robust protocol and class for inter-Arduino UART communication |
+| [SerialComm-LarsObsolete](https://github.com/kalnajslab-org/SerialComm-LarsObsolete) | Obsolete version of SerialComm, retained for reference |
+| [SafeBuffer](https://github.com/kalnajslab-org/SafeBuffer) | Bounds-checked buffer library for embedded C++ |
+| [TeensyEEPROM](https://github.com/kalnajslab-org/TeensyEEPROM) | Robust library for storing and retrieving configurations in Teensy EEPROM |
+| [Tsensor1Wire](https://github.com/kalnajslab-org/Tsensor1Wire) | Library for one-wire temperature sensors |
+| [StratoLinduino](https://github.com/kalnajslab-org/StratoLinduino) | Hardware support files cherry-picked from the ADI Linduino repository |
+| [Technosoft](https://github.com/kalnajslab-org/Technosoft) | Interface library for Technosoft motor controllers |
+
+### Ground Support Software
+
+| Repository | Description |
+|---|---|
+| [OBC_Simulator](https://github.com/kalnajslab-org/OBC_Simulator) | On-board computer simulator for ground testing of Stratéole 2 instruments |
+| [ZephyrSim](https://github.com/kalnajslab-org/ZephyrSim) | Python simulation tool for the CNES Zephyr OBC communications |
+| [TMmonster](https://github.com/kalnajslab-org/TMmonster) | Telemetry monitor and display tool |
+| [TMdecoder](https://github.com/kalnajslab-org/TMdecoder) | Decoder for LASP instrument telemetry streams |
+| [TeleCommands](https://github.com/kalnajslab-org/TeleCommands) | Python tool for generating telecommands for LPC, RACHUTS, and FLOATS instruments |
+
+### Cloud
+
+| Repository                                                         | Description                                                                                                |
+| ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
+| [KalCloud](https://github.com/kalnajslab-org/KalCloud) _(private)_ | Cloud infrastructure for real-time system monitoring, messaging, data processing, and product distribution |
+
+### ASPEN
+
+| Repository | Description |
+| --- | --- |
+| [SbdMail](https://github.com/kalnajslab-org/SbdMail) | Downloads Iridium SBD emails and decodes LASP-specific attachments |
+| [VHFtracker](https://github.com/kalnajslab-org/VHFtracker) | Firmware for the VHF beacon which uses APRS to transmit location data of an instrument |
+| [TrackerFinder](https://github.com/kalnajslab-org/TrackerFinder) | Capture AX25 messages sent by a VHF tracker |
+| [WindBug](https://github.com/kalnajslab-org/WindBug) | Scrapes the JSOC web page and sends email alerts when wind criteria are met |
+
+### Hardware
+
+| Repository                                                           | Description                              |
+| -------------------------------------------------------------------- | ---------------------------------------- |
+| [Hardware](https://github.com/kalnajslab-org/Hardware) _(private)_   | PCB schematics and hardware design files |
+
+### Skysonde Plugins
+
+| Repository | Description |
+|---|---|
+| [LopcCncPlugin](https://github.com/kalnajslab-org/LopcCncPlugin) | Skysonde Client plugin for the LOPC/CNC instrument |
+| [HiStac2Plugin](https://github.com/kalnajslab-org/HiStac2Plugin) | Plugin for the HiStac2 instrument interface |
+
 ## Teensy Firmware Quickstart
 
 _We have decided it will be simpler just to use separate Git repository clones for each of the
