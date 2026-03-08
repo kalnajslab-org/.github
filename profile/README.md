@@ -41,7 +41,7 @@ GitHub Organization for the LASP Kalnajs Team.
 | Repository | Description |
 |---|---|
 | [OBC_Simulator](https://github.com/kalnajslab-org/OBC_Simulator) | On-board computer simulator for ground testing of Stratéole 2 instruments |
-| [ZephyrSim](https://github.com/kalnajslab-org/ZephyrSim) | Python simulation tool for the CNES Zephyr OBC communications |
+| [ZephyrSim](https://github.com/kalnajslab-org/ZephyrSim) | Upgraded OBC_Simulator (Qt6) tool for simulating CNES Zephyr OBC communications |
 | [TMmonster](https://github.com/kalnajslab-org/TMmonster) | Telemetry monitor and display tool |
 | [TMdecoder](https://github.com/kalnajslab-org/TMdecoder) | Decoder for LASP instrument telemetry streams |
 | [TeleCommands](https://github.com/kalnajslab-org/TeleCommands) | Python tool for generating telecommands for LPC, RACHUTS, and FLOATS instruments |
