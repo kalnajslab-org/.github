@@ -51,6 +51,7 @@ GitHub Organization for the LASP Kalnajs Team.
 | Repository                                                         | Description                                                                                                |
 | ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
 | [KalCloud](https://github.com/kalnajslab-org/KalCloud) _(private)_ | Cloud infrastructure for real-time system monitoring, messaging, data processing, and product distribution |
+| [KalCloudGrafana](https://github.com/kalnajslab-org/KalCloud) _(private)_ | Repoistory for just the grafana dashboards. Keep separate for finer write access control |
 
 ### ASPEN
 
