@@ -28,6 +28,7 @@ GitHub Organization for the LASP Kalnajs Team.
 | [StrateoleXML](https://github.com/kalnajslab-org/StrateoleXML) | XML-based communications library for interfacing with the CNES Zephyr OBC |
 | [ECUcomm](https://github.com/kalnajslab-org/ECUcomm) | LoRa-based communications protocol between the RATS ECU and main board |
 | [MCBComm](https://github.com/kalnajslab-org/MCBComm) | Communications protocol library for the Motor Control Board |
+| [RPUComm](https://github.com/kalnajslab-org/RPUComm) | Communications protocol library for the RATCHuTS Profiling Unit |
 | [PUCode](https://github.com/kalnajslab-org/PUCode) | Communications protocol between the Profiling Unit and RACHUTS |
 | [SerialComm](https://github.com/kalnajslab-org/SerialComm) | Simple, robust protocol and class for inter-Arduino UART communication |
 | [SerialComm-LarsObsolete](https://github.com/kalnajslab-org/SerialComm-LarsObsolete) | Obsolete version of SerialComm, retained for reference |
