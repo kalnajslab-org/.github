@@ -15,7 +15,7 @@ GitHub Organization for the LASP Kalnajs Team.
 | [StratoCore_FLOATS](https://github.com/kalnajslab-org/StratoCore_FLOATS) | Main board application for the FLOATS instrument |
 | [PHA_V5_1](https://github.com/kalnajslab-org/PHA_V5_1) | Pulse Height Analyzer firmware for the LPC particle counter board |
 | [ECU](https://github.com/kalnajslab-org/ECU) | End Control Unit firmware for the RATS tether reel system |
-| [RACHuTS-Profiler](https://github.com/kalnajslab-org/RACHuTS-Profiler) | RACHuTS cable profiler unit |
+| [RPU](https://github.com/kalnajslab-org/RPU) | RACHuTS profiling unit |
 | [MCB_T4.1](https://github.com/kalnajslab-org/MCB_T4.1) | Motor Control Board firmware for RATS/RACHUTS, updated for Teensy 4.1 |
 | [MCB](https://github.com/kalnajslab-org/MCB) | Motor Control Board firmware for the RACHUTS MonDo reel board |
 | [RS41](https://github.com/kalnajslab-org/RS41) | Support library for the Vaisala RS41 radiosonde |
