@@ -29,7 +29,7 @@ GitHub Organization for the LASP Kalnajs Team.
 | [ECUcomm](https://github.com/kalnajslab-org/ECUcomm) | LoRa-based communications protocol between the RATS ECU and main board |
 | [MCBComm](https://github.com/kalnajslab-org/MCBComm) | Communications protocol library for the Motor Control Board |
 | [RPUComm](https://github.com/kalnajslab-org/RPUComm) | Communications protocol library for the RATCHuTS Profiling Unit |
-| [PUCode](https://github.com/kalnajslab-org/PUCode) | Communications protocol between the Profiling Unit and RACHUTS |
+| [PUCode](https://github.com/kalnajslab-org/PUCode) | 1st generation firmware for the RACHuTS profiling unit, and the communications protocol between the Profiling Unit and RACHUTS. Replaced by [RPU](https://github.com/kalnajslab-org/RPU) and [RPUComm](https://github.com/kalnajslab-org/RPUComm). |
 | [SerialComm](https://github.com/kalnajslab-org/SerialComm) | Simple, robust protocol and class for inter-Arduino UART communication |
 | [SerialComm-LarsObsolete](https://github.com/kalnajslab-org/SerialComm-LarsObsolete) | Obsolete version of SerialComm, retained for reference |
 | [SafeBuffer](https://github.com/kalnajslab-org/SafeBuffer) | Bounds-checked buffer library for embedded C++ |
