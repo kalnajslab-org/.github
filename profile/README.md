@@ -17,7 +17,6 @@ GitHub Organization for the LASP Kalnajs Team.
 | [ECU](https://github.com/kalnajslab-org/ECU) | End Control Unit firmware for the RATS tether reel system |
 | [RPU](https://github.com/kalnajslab-org/RPU) | RACHuTS profiling unit |
 | [MCB_T4.1](https://github.com/kalnajslab-org/MCB_T4.1) | Motor Control Board firmware for RATS/RACHUTS, updated for Teensy 4.1 |
-| [MCB](https://github.com/kalnajslab-org/MCB) | Motor Control Board firmware for the RACHUTS MonDo reel board |
 | [RS41](https://github.com/kalnajslab-org/RS41) | Support library for the Vaisala RS41 radiosonde |
 
 ### Core Firmware Libraries
@@ -29,9 +28,7 @@ GitHub Organization for the LASP Kalnajs Team.
 | [ECUcomm](https://github.com/kalnajslab-org/ECUcomm) | LoRa-based communications protocol between the RATS ECU and main board |
 | [MCBComm](https://github.com/kalnajslab-org/MCBComm) | Communications protocol library for the Motor Control Board |
 | [RPUComm](https://github.com/kalnajslab-org/RPUComm) | Communications protocol library for the RATCHuTS Profiling Unit |
-| [PUCode](https://github.com/kalnajslab-org/PUCode) | 1st generation firmware for the RACHuTS profiling unit, and the communications protocol between the Profiling Unit and RACHUTS. Replaced by [RPU](https://github.com/kalnajslab-org/RPU) and [RPUComm](https://github.com/kalnajslab-org/RPUComm). |
 | [SerialComm](https://github.com/kalnajslab-org/SerialComm) | Simple, robust protocol and class for inter-Arduino UART communication |
-| [SerialComm-LarsObsolete](https://github.com/kalnajslab-org/SerialComm-LarsObsolete) | Obsolete version of SerialComm, retained for reference |
 | [SafeBuffer](https://github.com/kalnajslab-org/SafeBuffer) | Bounds-checked buffer library for embedded C++ |
 | [TeensyEEPROM](https://github.com/kalnajslab-org/TeensyEEPROM) | Robust library for storing and retrieving configurations in Teensy EEPROM |
 | [Tsensor1Wire](https://github.com/kalnajslab-org/Tsensor1Wire) | Library for one-wire temperature sensors |
@@ -42,11 +39,19 @@ GitHub Organization for the LASP Kalnajs Team.
 
 | Repository | Description |
 |---|---|
-| [OBC_Simulator](https://github.com/kalnajslab-org/OBC_Simulator) | On-board computer simulator for ground testing of Stratéole 2 instruments |
 | [ZephyrSim](https://github.com/kalnajslab-org/ZephyrSim) | Upgraded OBC_Simulator (Qt6) tool for simulating CNES Zephyr OBC communications |
 | [TMmonster](https://github.com/kalnajslab-org/TMmonster) | TM decoder tool, the Swiss Army Knife of TM decoding |
-| [TMdecoder](https://github.com/kalnajslab-org/TMdecoder) | Decoder for LASP instrument telemetry streams |
 | [TeleCommands](https://github.com/kalnajslab-org/TeleCommands) | Python tool for generating telecommands for LPC, RACHUTS, and FLOATS instruments |
+
+### Obsolete
+
+| Repository | Description |
+|---|---|
+| [MCB](https://github.com/kalnajslab-org/MCB) | Motor Control Board firmware for the RACHUTS MonDo reel board |
+| [PUCode](https://github.com/kalnajslab-org/PUCode) | 1st generation firmware for the RACHuTS profiling unit, and the communications protocol between the Profiling Unit and RACHUTS. Replaced by [RPU](https://github.com/kalnajslab-org/RPU) and [RPUComm](https://github.com/kalnajslab-org/RPUComm). |
+| [OBC_Simulator](https://github.com/kalnajslab-org/OBC_Simulator) | On-board computer simulator for ground testing of Stratéole 2 instruments |
+| [SerialComm-LarsObsolete](https://github.com/kalnajslab-org/SerialComm-LarsObsolete) | Obsolete version of SerialComm, retained for reference |
+| [TMdecoder](https://github.com/kalnajslab-org/TMdecoder) | Decoder for LASP instrument telemetry streams |
 
 ### Cloud
 
@@ -54,6 +59,12 @@ GitHub Organization for the LASP Kalnajs Team.
 | ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
 | [KalCloud](https://github.com/kalnajslab-org/KalCloud) _(private)_ | Cloud infrastructure for real-time system monitoring, messaging, data processing, and product distribution |
 | [KalCloudGrafana](https://github.com/kalnajslab-org/KalCloudGrafana) _(private)_ | Repoistory for just the grafana dashboards. Keep separate for finer write access control |
+
+### Hardware
+
+| Repository                                                           | Description                              |
+| -------------------------------------------------------------------- | ---------------------------------------- |
+| [Hardware](https://github.com/kalnajslab-org/Hardware) _(private)_   | PCB schematics and hardware design files |
 
 ### ASPEN
 
@@ -63,12 +74,6 @@ GitHub Organization for the LASP Kalnajs Team.
 | [VHFtracker](https://github.com/kalnajslab-org/VHFtracker) | Firmware for the VHF beacon which uses APRS to transmit location data of an instrument |
 | [TrackerFinder](https://github.com/kalnajslab-org/TrackerFinder) | Capture AX25 messages sent by a VHF tracker |
 | [WindBug](https://github.com/kalnajslab-org/WindBug) | Scrapes the JSOC web page and sends email alerts when wind criteria are met |
-
-### Hardware
-
-| Repository                                                           | Description                              |
-| -------------------------------------------------------------------- | ---------------------------------------- |
-| [Hardware](https://github.com/kalnajslab-org/Hardware) _(private)_   | PCB schematics and hardware design files |
 
 ### Skysonde Plugins
 
