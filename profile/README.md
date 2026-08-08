@@ -12,7 +12,6 @@ GitHub Organization for the LASP Kalnajs Team.
 | [StratoCore_LPC](https://github.com/kalnajslab-org/StratoCore_LPC) | Main board application for the Laser Particle Counter |
 | [StratoCore_RATS](https://github.com/kalnajslab-org/StratoCore_RATS) | Main board application for the Reel-down Aerosol and Temperature Sampler |
 | [StratoCore_RACHUTS](https://github.com/kalnajslab-org/StratoCore_RACHUTS) | Main board application for the RAdiative and CHemical composition Using Tethered Sondes |
-| [StratoCore_FLOATS](https://github.com/kalnajslab-org/StratoCore_FLOATS) | Main board application for the FLOATS instrument |
 | [PHA_V5_1](https://github.com/kalnajslab-org/PHA_V5_1) | Pulse Height Analyzer firmware for the LPC particle counter board |
 | [ECU](https://github.com/kalnajslab-org/ECU) | End Control Unit firmware for the RATS tether reel system |
 | [RPU](https://github.com/kalnajslab-org/RPU) | RACHuTS profiling unit |
@@ -52,6 +51,7 @@ GitHub Organization for the LASP Kalnajs Team.
 | [OBC_Simulator](https://github.com/kalnajslab-org/OBC_Simulator) | On-board computer simulator for ground testing of Stratéole 2 instruments |
 | [SerialComm-LarsObsolete](https://github.com/kalnajslab-org/SerialComm-LarsObsolete) | Obsolete version of SerialComm, retained for reference |
 | [TMdecoder](https://github.com/kalnajslab-org/TMdecoder) | Decoder for LASP instrument telemetry streams |
+| [StratoCore_FLOATS](https://github.com/kalnajslab-org/StratoCore_FLOATS) | Main board application for the FLOATS instrument |
 
 ### Cloud
 
@@ -85,14 +85,15 @@ GitHub Organization for the LASP Kalnajs Team.
 ## Teensy Firmware Quickstart
 
 _We have decided it will be simpler just to use separate Git repository clones for each of the
-development environments. You can use either one._
+development environments. Note that we have since migrated exclusively to PlatformIO; see
+[Firmware Development Environments](#firmware-development-environments) below._
 
 1. If using the ArduinoIDE build environment:
     1. Create *Sketchbook/* and *Sketchbook/libraries/* directories.
        (You may already have this as *~/Documents/Arduino/* or some other Sketchbook directory).
     1. Clone the main applications (e.g. *StratoCore_LPC.git*) into *Sketchbook/libraries/*.
     1. For ArduinoIDE:
-        1. Clone LASP support libraries (e.g. *StrateolXML.git*) into *Sketchbook/libraries/*.
+        1. Clone LASP support libraries (e.g. *StrateoleXML.git*) into *Sketchbook/libraries/*.
         1. Unzip ZIP libraries (e.g. *StratoCore_LPC/zips/\*.zip*) into *Sketchbook/libraries/*.
         1. From ArduinoIDE:
             1. In *Settings*, set Sketchbook location to *Sketchbook/*.
@@ -105,57 +106,52 @@ development environments. You can use either one._
 
 More [ArduinoIDE details](#arduinoide) and [PlatformIO details](#platformio) are found below.
 
-## Repositories Summary
+## Repositories Dependencies
 
-### Laser Particle Counter (LPC)
-Main Board:
-1. StratoCore_LPC
-2. StratoCore
-3. StrateoXML
-4. StratoLinduino
-5. RS41
+Each row's Subsystem links to that subsystem's own repository; the dependency columns list what it depends on, so the subsystem's own repository is not repeated there.
 
-Particle Counter:
-1. PHA_V5_1
+### LPC
+
+| Subsystem | kalnajslab-org Dependencies | External Dependencies |
+|---|---|---|
+| [Main Board](https://github.com/kalnajslab-org/StratoCore_LPC) | [StratoCore](https://github.com/kalnajslab-org/StratoCore)<br>[StrateoleXML](https://github.com/kalnajslab-org/StrateoleXML)<br>[StratoLinduino](https://github.com/kalnajslab-org/StratoLinduino)<br>[RS41](https://github.com/kalnajslab-org/RS41) | TinyGPSPlus<br>WDT_T4 |
+| [Particle Counter](https://github.com/kalnajslab-org/PHA_V5_1) | [StratoLinduino](https://github.com/kalnajslab-org/StratoLinduino) | TinyGPSPlus |
 
 ### RATS
-Main Board:
-1. StratoCore_RATS
-2. StratoCore
-3. StrateoXML
-4. ECUcomm
 
-Reel Controller:
-1. MCB_T4.1
+| Subsystem | kalnajslab-org Dependencies | External Dependencies |
+|---|---|---|
+| [Main Board](https://github.com/kalnajslab-org/StratoCore_RATS) | [StratoCore](https://github.com/kalnajslab-org/StratoCore)<br>[StrateoleXML](https://github.com/kalnajslab-org/StrateoleXML)<br>[ECUcomm](https://github.com/kalnajslab-org/ECUcomm)<br>[MCBComm](https://github.com/kalnajslab-org/MCBComm)<br>[StratoLinduino](https://github.com/kalnajslab-org/StratoLinduino)<br>[TeensyEEPROM](https://github.com/kalnajslab-org/TeensyEEPROM)<br>[SerialComm](https://github.com/kalnajslab-org/SerialComm) | TinyGPSPlus<br>WDT_T4<br>LoRa<br>ArduinoJson<br>TeensyID<br>Embedded Template Library (ETL) |
+| [Reel Controller](https://github.com/kalnajslab-org/MCB_T4.1) | [MCBComm](https://github.com/kalnajslab-org/MCBComm)<br>[TeensyEEPROM](https://github.com/kalnajslab-org/TeensyEEPROM)<br>[SafeBuffer](https://github.com/kalnajslab-org/SafeBuffer)<br>[Technosoft](https://github.com/kalnajslab-org/Technosoft)<br>[Tsensor1Wire](https://github.com/kalnajslab-org/Tsensor1Wire)<br>[StratoLinduino](https://github.com/kalnajslab-org/StratoLinduino)<br>[SerialComm](https://github.com/kalnajslab-org/SerialComm) | TinyGPSPlus<br>WDT_T4 |
+| [End Control Unit (ECU)](https://github.com/kalnajslab-org/ECU) | [ECUcomm](https://github.com/kalnajslab-org/ECUcomm)<br>[RS41](https://github.com/kalnajslab-org/RS41) | TinyGPSPlus<br>WDT_T4<br>LoRa<br>DallasTemperature<br>ArduinoJson<br>TeensyID<br>Embedded Template Library (ETL) |
 
-End Control Unit (ECU):
-1. ECU
-2. ECUcomm
+### RACHUTS
 
-### RATCHUTS
-Main Board Teensy:
-1. StratoPIB
-2. StratoCore
-3. StrateoXML
-
-Reel Controller Teensy:
-1. MCB_T4.1
+| Subsystem | kalnajslab-org Dependencies | External Dependencies |
+|---|---|---|
+| [Main Board](https://github.com/kalnajslab-org/StratoCore_RACHUTS) | [StratoCore](https://github.com/kalnajslab-org/StratoCore)<br>[StrateoleXML](https://github.com/kalnajslab-org/StrateoleXML)<br>[StratoLinduino](https://github.com/kalnajslab-org/StratoLinduino)<br>[MCBComm](https://github.com/kalnajslab-org/MCBComm)<br>[TeensyEEPROM](https://github.com/kalnajslab-org/TeensyEEPROM)<br>[SerialComm](https://github.com/kalnajslab-org/SerialComm)<br>[RPUComm](https://github.com/kalnajslab-org/RPUComm) | TinyGPSPlus<br>WDT_T4<br>LoRa |
+| [Reel Controller](https://github.com/kalnajslab-org/MCB_T4.1) | [MCBComm](https://github.com/kalnajslab-org/MCBComm)<br>[TeensyEEPROM](https://github.com/kalnajslab-org/TeensyEEPROM)<br>[SafeBuffer](https://github.com/kalnajslab-org/SafeBuffer)<br>[Technosoft](https://github.com/kalnajslab-org/Technosoft)<br>[Tsensor1Wire](https://github.com/kalnajslab-org/Tsensor1Wire)<br>[StratoLinduino](https://github.com/kalnajslab-org/StratoLinduino)<br>[SerialComm](https://github.com/kalnajslab-org/SerialComm) | TinyGPSPlus<br>WDT_T4 |
+| [Profiling Unit](https://github.com/kalnajslab-org/RPU) | [RPUComm](https://github.com/kalnajslab-org/RPUComm)<br>[SerialComm](https://github.com/kalnajslab-org/SerialComm)<br>[Tsensor1Wire](https://github.com/kalnajslab-org/Tsensor1Wire)<br>[RS41](https://github.com/kalnajslab-org/RS41) | TinyGPSPlus<br>WDT_T4<br>LoRa<br>Time<br>Embedded Template Library (ETL) |
 
 ## Firmware Development Environments
 
-We support two firmware development environments:
-- ArduinoIDE: The tried-and-true hobbiest-oriented tool. It is the mainstay in the Arduino community,
-  but is maddenly frustrating for projects with any level of complexity.
-- PlatformIO: A more modern framework which combines VSCode and Scons to provide a more productive
-  environment, including rigourous configuration definitions, Intellisense, Git integration,
+We started out supporting two firmware development environments:
+- ArduinoIDE: The tried-and-true hobbyist-oriented tool. It is the mainstay in the Arduino community,
+  but is maddeningly frustrating for projects with any level of complexity.
+- PlatformIO: A more modern framework which combines VSCode and SCons to provide a more productive
+  environment, including rigorous configuration definitions, Intellisense, Git integration,
   and more.
 
-With a few workarounds, the kalnajslab-org repositories can be used in either environment. A
+With a few workarounds, the kalnajslab-org repositories could be used in either environment. A
 workflow is documented here which describes how to do this.
+
+Since then, we have gradually migrated exclusively to the PlatformIO tooling. The ArduinoIDE
+approach may no longer work out of the box; the Prerequisites and ArduinoIDE sections below are
+kept for reference but are no longer actively maintained.
 
 ### Prerequisites
 
-1. We use a directory structure that will accomodate both techniques.
+1. We use a directory structure that will accommodate both techniques.
    Create a top level directory, which will be the *Sketchbook* location.
    (You may already have one, typically *~/Documents/Arduino/*.) Add a *libraries/* sub-directory:
 ```sh
@@ -170,7 +166,7 @@ Sketchbook/
    - The ArduinoIDE library manager.
    - `git clone` of one of our repositories.
    - Unzipping of a library zip file.
-1. Clone the applications (e.g.*StratoCore_RATS*) into *Sketchbook/libraries/*.
+1. Clone the applications (e.g. *StratoCore_RATS*) into *Sketchbook/libraries/*.
 
 ### ArduinoIDE
 
@@ -229,7 +225,7 @@ PlatformIO creates the *.pio/* tree to hold all of the build artifacts.
 All library references are downloaded from the PlatformIO repo or 
 GitHub, into *.pio/libdeps/<env>/*.
 
-As mentioned above, the *.pio/* tree and *src/main.cpp*, give ArduinoIDE great 
+As mentioned above, the *.pio/* tree and the *src/*.cpp* link, give ArduinoIDE great 
 indigestion, and they are removed if you want to use the same git repo clone with
 both environments. 
 
@@ -246,9 +242,14 @@ into _.pio/libdeps/<env_name>/<library_name>_. The easiest way to find
 the code is to right-click on the function call in the app code, 
 navigate to the definition, and edit/build/test.
 
-Edits will appear in the VSCode Source Control pane, and you can
+In order for edits to the libdeps library to appear in the VSCode Source Control pane, you must
+open it as its own repository: View -> Command Palette -> Git: Open Repository, then navigate to
+and select the corect _libdeps_ repository. (On macOS, use Shift+Cmd+. to reveal hidden directories,
+since _.pio/_ is hidden.)
+
+Once opened, edits will appear in the VSCode Source Control pane, and you can
 commit them from here. _BUT if you do a PlatformIO "Clean All",
-before commiting and pushing, you will loose all of your edits._
+before committing and pushing, you will lose all of your edits._
 This is because "Clean All" erases everything in _.pio/_. (A
 simple "Clean" is OK).
 
@@ -276,7 +277,7 @@ provides. This means that the following _platformio.ini_ parameter does nothing:
 ```
 See this [issue](https://github.com/platformio/platform-teensy/issues/44).
 
-But there is a very handy port selector, once again at the _bottom_ of VSCode_, which
+But there is a very handy port selector, once again at the _bottom_ of VSCode, which
 (once again) opens a selector at the _top_ of VSCode. It is initially set to _Auto_;
 just change it to the correct port and uploads/monitors will work, and you can leave
 multiple Teensies plugged in.
