@@ -133,6 +133,25 @@ Each row's Subsystem links to that subsystem's own repository; the dependency co
 | [Reel Controller](https://github.com/kalnajslab-org/MCB_T4.1) | [MCBComm](https://github.com/kalnajslab-org/MCBComm)<br>[TeensyEEPROM](https://github.com/kalnajslab-org/TeensyEEPROM)<br>[SafeBuffer](https://github.com/kalnajslab-org/SafeBuffer)<br>[Technosoft](https://github.com/kalnajslab-org/Technosoft)<br>[Tsensor1Wire](https://github.com/kalnajslab-org/Tsensor1Wire)<br>[StratoLinduino](https://github.com/kalnajslab-org/StratoLinduino)<br>[SerialComm](https://github.com/kalnajslab-org/SerialComm) | TinyGPSPlus<br>WDT_T4 |
 | [Profiling Unit](https://github.com/kalnajslab-org/RPU) | [RPUComm](https://github.com/kalnajslab-org/RPUComm)<br>[SerialComm](https://github.com/kalnajslab-org/SerialComm)<br>[Tsensor1Wire](https://github.com/kalnajslab-org/Tsensor1Wire)<br>[RS41](https://github.com/kalnajslab-org/RS41) | TinyGPSPlus<br>WDT_T4<br>LoRa<br>Time<br>Embedded Template Library (ETL) |
 
+## Reverse Dependencies
+
+The inverse of the tables above: for each support library, the subsystems that need to be rebuilt if it changes.
+
+| Library | Used By |
+|---|---|
+| [StratoLinduino](https://github.com/kalnajslab-org/StratoLinduino) | [StratoCore_LPC](https://github.com/kalnajslab-org/StratoCore_LPC)<br>[PHA_V5_1](https://github.com/kalnajslab-org/PHA_V5_1)<br>[StratoCore_RATS](https://github.com/kalnajslab-org/StratoCore_RATS)<br>[MCB_T4.1](https://github.com/kalnajslab-org/MCB_T4.1)<br>[StratoCore_RACHUTS](https://github.com/kalnajslab-org/StratoCore_RACHUTS) |
+| [SerialComm](https://github.com/kalnajslab-org/SerialComm) | [StratoCore_RATS](https://github.com/kalnajslab-org/StratoCore_RATS)<br>[MCB_T4.1](https://github.com/kalnajslab-org/MCB_T4.1)<br>[StratoCore_RACHUTS](https://github.com/kalnajslab-org/StratoCore_RACHUTS)<br>[RPU](https://github.com/kalnajslab-org/RPU) |
+| [StratoCore](https://github.com/kalnajslab-org/StratoCore) | [StratoCore_LPC](https://github.com/kalnajslab-org/StratoCore_LPC)<br>[StratoCore_RATS](https://github.com/kalnajslab-org/StratoCore_RATS)<br>[StratoCore_RACHUTS](https://github.com/kalnajslab-org/StratoCore_RACHUTS) |
+| [StrateoleXML](https://github.com/kalnajslab-org/StrateoleXML) | [StratoCore_LPC](https://github.com/kalnajslab-org/StratoCore_LPC)<br>[StratoCore_RATS](https://github.com/kalnajslab-org/StratoCore_RATS)<br>[StratoCore_RACHUTS](https://github.com/kalnajslab-org/StratoCore_RACHUTS) |
+| [RS41](https://github.com/kalnajslab-org/RS41) | [StratoCore_LPC](https://github.com/kalnajslab-org/StratoCore_LPC)<br>[ECU](https://github.com/kalnajslab-org/ECU)<br>[RPU](https://github.com/kalnajslab-org/RPU) |
+| [MCBComm](https://github.com/kalnajslab-org/MCBComm) | [StratoCore_RATS](https://github.com/kalnajslab-org/StratoCore_RATS)<br>[MCB_T4.1](https://github.com/kalnajslab-org/MCB_T4.1)<br>[StratoCore_RACHUTS](https://github.com/kalnajslab-org/StratoCore_RACHUTS) |
+| [TeensyEEPROM](https://github.com/kalnajslab-org/TeensyEEPROM) | [StratoCore_RATS](https://github.com/kalnajslab-org/StratoCore_RATS)<br>[MCB_T4.1](https://github.com/kalnajslab-org/MCB_T4.1)<br>[StratoCore_RACHUTS](https://github.com/kalnajslab-org/StratoCore_RACHUTS) |
+| [ECUcomm](https://github.com/kalnajslab-org/ECUcomm) | [StratoCore_RATS](https://github.com/kalnajslab-org/StratoCore_RATS)<br>[ECU](https://github.com/kalnajslab-org/ECU) |
+| [RPUComm](https://github.com/kalnajslab-org/RPUComm) | [StratoCore_RACHUTS](https://github.com/kalnajslab-org/StratoCore_RACHUTS)<br>[RPU](https://github.com/kalnajslab-org/RPU) |
+| [Tsensor1Wire](https://github.com/kalnajslab-org/Tsensor1Wire) | [MCB_T4.1](https://github.com/kalnajslab-org/MCB_T4.1)<br>[RPU](https://github.com/kalnajslab-org/RPU) |
+| [SafeBuffer](https://github.com/kalnajslab-org/SafeBuffer) | [MCB_T4.1](https://github.com/kalnajslab-org/MCB_T4.1) |
+| [Technosoft](https://github.com/kalnajslab-org/Technosoft) | [MCB_T4.1](https://github.com/kalnajslab-org/MCB_T4.1) |
+
 ## Firmware Development Environments
 
 We started out supporting two firmware development environments:
