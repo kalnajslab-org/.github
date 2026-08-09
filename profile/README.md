@@ -10,13 +10,13 @@ GitHub Organization for the LASP Kalnajs Team.
 | Repository | Description |
 |---|---|
 | [StratoCore_LPC](https://github.com/kalnajslab-org/StratoCore_LPC) | Main board application for the Laser Particle Counter |
-| [StratoCore_RATS](https://github.com/kalnajslab-org/StratoCore_RATS) | Main board application for the Reel-down Aerosol and Temperature Sampler |
-| [StratoCore_RACHUTS](https://github.com/kalnajslab-org/StratoCore_RACHUTS) | Main board application for the RAdiative and CHemical composition Using Tethered Sondes |
+| [StratoCore_RATS](https://github.com/kalnajslab-org/StratoCore_RATS) | Main board application for the Reel-Down Atmospheric Temperature Sensor |
+| [StratoCore_RACHUTS](https://github.com/kalnajslab-org/StratoCore_RACHUTS) | Main board application for the Reeldown Aerosol, Clouds, Humidity, and Temperature Sensor |
 | [PHA_V5_1](https://github.com/kalnajslab-org/PHA_V5_1) | Pulse Height Analyzer firmware for the LPC particle counter board |
 | [ECU](https://github.com/kalnajslab-org/ECU) | End Control Unit firmware for the RATS tether reel system |
 | [RPU](https://github.com/kalnajslab-org/RPU) | RACHuTS profiling unit |
 | [MCB_T4.1](https://github.com/kalnajslab-org/MCB_T4.1) | Motor Control Board firmware for RATS/RACHUTS, updated for Teensy 4.1 |
-| [RS41](https://github.com/kalnajslab-org/RS41) | Support library for the Vaisala RS41 radiosonde |
+| [RS41](https://github.com/kalnajslab-org/RS41) | Support library for the Vaisala RSS421 radiosonde |
 
 ### Core Firmware Libraries
 
