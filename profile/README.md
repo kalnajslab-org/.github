@@ -74,6 +74,17 @@ GitHub Organization for the LASP Kalnajs Team.
 | [LopcCncPlugin](https://github.com/kalnajslab-org/LopcCncPlugin) | Skysonde Client plugin for the LOPC/CNC instrument |
 | [HiStac2Plugin](https://github.com/kalnajslab-org/HiStac2Plugin) | Plugin for the HiStac2 instrument interface |
 
+### Obsolete
+
+| Repository | Description |
+|---|---|
+| [MCB](https://github.com/kalnajslab-org/MCB) | Motor Control Board firmware for the RACHUTS MonDo reel board |
+| [PUCode](https://github.com/kalnajslab-org/PUCode) | 1st generation firmware for the RACHuTS profiling unit, and the communications protocol between the Profiling Unit and RACHUTS. Replaced by [RPU][...]
+| [OBC_Simulator](https://github.com/kalnajslab-org/OBC_Simulator) | On-board computer simulator for ground testing of Stratéole 2 instruments |
+| [SerialComm-LarsObsolete](https://github.com/kalnajslab-org/SerialComm-LarsObsolete) | Obsolete version of SerialComm, retained for reference |
+| [TMdecoder](https://github.com/kalnajslab-org/TMdecoder) | Decoder for LASP instrument telemetry streams |
+| [StratoCore_FLOATS](https://github.com/kalnajslab-org/StratoCore_FLOATS) | Main board application for the FLOATS instrument |
+
 ## Teensy Firmware Quickstart
 
 _We have decided it will be simpler just to use separate Git repository clones for each of the
@@ -97,17 +108,6 @@ development environments. Note that we have since migrated exclusively to Platfo
    1. Create a *.cpp* link in */src* to the *.ino* file. (E.g. *src/StratoCore_LPC.cpp -> ../StratoCore_LPC.ino*)
 
 More [ArduinoIDE details](#arduinoide) and [PlatformIO details](#platformio) are found below.
-
-### Obsolete
-
-| Repository | Description |
-|---|---|
-| [MCB](https://github.com/kalnajslab-org/MCB) | Motor Control Board firmware for the RACHUTS MonDo reel board |
-| [PUCode](https://github.com/kalnajslab-org/PUCode) | 1st generation firmware for the RACHuTS profiling unit, and the communications protocol between the Profiling Unit and RACHUTS. Replaced by [RPU][...]
-| [OBC_Simulator](https://github.com/kalnajslab-org/OBC_Simulator) | On-board computer simulator for ground testing of Stratéole 2 instruments |
-| [SerialComm-LarsObsolete](https://github.com/kalnajslab-org/SerialComm-LarsObsolete) | Obsolete version of SerialComm, retained for reference |
-| [TMdecoder](https://github.com/kalnajslab-org/TMdecoder) | Decoder for LASP instrument telemetry streams |
-| [StratoCore_FLOATS](https://github.com/kalnajslab-org/StratoCore_FLOATS) | Main board application for the FLOATS instrument |
 
 ## Repository Dependencies
 
