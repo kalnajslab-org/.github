@@ -48,7 +48,7 @@ GitHub Organization for the LASP Kalnajs Team.
 | Repository | Description |
 |---|---|
 | [MCB](https://github.com/kalnajslab-org/MCB) | Motor Control Board firmware for the RACHUTS MonDo reel board |
-| [PUCode](https://github.com/kalnajslab-org/PUCode) | 1st generation firmware for the RACHuTS profiling unit, and the communications protocol between the Profiling Unit and RACHUTS. Replaced by [RPU](https://github.com/kalnajslab-org/RPU) and [RPUComm](https://github.com/kalnajslab-org/RPUComm). |
+| [PUCode](https://github.com/kalnajslab-org/PUCode) | 1st generation firmware for the RACHuTS profiling unit, and the communications protocol between the Profiling Unit and RACHUTS. Replaced by [RPU][...]
 | [OBC_Simulator](https://github.com/kalnajslab-org/OBC_Simulator) | On-board computer simulator for ground testing of Stratéole 2 instruments |
 | [SerialComm-LarsObsolete](https://github.com/kalnajslab-org/SerialComm-LarsObsolete) | Obsolete version of SerialComm, retained for reference |
 | [TMdecoder](https://github.com/kalnajslab-org/TMdecoder) | Decoder for LASP instrument telemetry streams |
@@ -60,6 +60,7 @@ GitHub Organization for the LASP Kalnajs Team.
 | ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
 | [KalCloud](https://github.com/kalnajslab-org/KalCloud) _(private)_ | Cloud infrastructure for real-time system monitoring, messaging, data processing, and product distribution |
 | [KalCloudGrafana](https://github.com/kalnajslab-org/KalCloudGrafana) _(private)_ | Repoistory for just the grafana dashboards. Keep separate for finer write access control |
+| [datapipe_strat](https://github.com/kalnajslab-org/datapipe_strat) _(private)_ | Data pipeline for Stratéole 2 system |
 
 ### Hardware
 
@@ -115,24 +116,24 @@ Each row's Subsystem links to that subsystem's own repository; the dependency co
 
 | Subsystem | kalnajslab-org Dependencies | External Dependencies |
 |---|---|---|
-| [Main Board](https://github.com/kalnajslab-org/StratoCore_LPC) | [StratoCore](https://github.com/kalnajslab-org/StratoCore)<br>[StrateoleXML](https://github.com/kalnajslab-org/StrateoleXML)<br>[StratoLinduino](https://github.com/kalnajslab-org/StratoLinduino)<br>[RS41](https://github.com/kalnajslab-org/RS41) | TinyGPSPlus<br>WDT_T4 |
+| [Main Board](https://github.com/kalnajslab-org/StratoCore_LPC) | [StratoCore](https://github.com/kalnajslab-org/StratoCore)<br>[StrateoleXML](https://github.com/kalnajslab-org/StrateoleXML)<br>[Stra[...]
 | [Particle Counter](https://github.com/kalnajslab-org/PHA_V5_1) | [StratoLinduino](https://github.com/kalnajslab-org/StratoLinduino) | TinyGPSPlus |
 
 ### RATS
 
 | Subsystem | kalnajslab-org Dependencies | External Dependencies |
 |---|---|---|
-| [Main Board](https://github.com/kalnajslab-org/StratoCore_RATS) | [StratoCore](https://github.com/kalnajslab-org/StratoCore)<br>[StrateoleXML](https://github.com/kalnajslab-org/StrateoleXML)<br>[ECUcomm](https://github.com/kalnajslab-org/ECUcomm)<br>[MCBComm](https://github.com/kalnajslab-org/MCBComm)<br>[StratoLinduino](https://github.com/kalnajslab-org/StratoLinduino)<br>[TeensyEEPROM](https://github.com/kalnajslab-org/TeensyEEPROM)<br>[SerialComm](https://github.com/kalnajslab-org/SerialComm) | TinyGPSPlus<br>WDT_T4<br>LoRa<br>ArduinoJson<br>TeensyID<br>Embedded Template Library (ETL) |
-| [Reel Controller](https://github.com/kalnajslab-org/MCB_T4.1) | [MCBComm](https://github.com/kalnajslab-org/MCBComm)<br>[TeensyEEPROM](https://github.com/kalnajslab-org/TeensyEEPROM)<br>[SafeBuffer](https://github.com/kalnajslab-org/SafeBuffer)<br>[Technosoft](https://github.com/kalnajslab-org/Technosoft)<br>[Tsensor1Wire](https://github.com/kalnajslab-org/Tsensor1Wire)<br>[StratoLinduino](https://github.com/kalnajslab-org/StratoLinduino)<br>[SerialComm](https://github.com/kalnajslab-org/SerialComm) | TinyGPSPlus<br>WDT_T4 |
-| [End Control Unit (ECU)](https://github.com/kalnajslab-org/ECU) | [ECUcomm](https://github.com/kalnajslab-org/ECUcomm)<br>[RS41](https://github.com/kalnajslab-org/RS41) | TinyGPSPlus<br>WDT_T4<br>LoRa<br>DallasTemperature<br>ArduinoJson<br>TeensyID<br>Embedded Template Library (ETL) |
+| [Main Board](https://github.com/kalnajslab-org/StratoCore_RATS) | [StratoCore](https://github.com/kalnajslab-org/StratoCore)<br>[StrateoleXML](https://github.com/kalnajslab-org/StrateoleXML)<br>[ECU[...]
+| [Reel Controller](https://github.com/kalnajslab-org/MCB_T4.1) | [MCBComm](https://github.com/kalnajslab-org/MCBComm)<br>[TeensyEEPROM](https://github.com/kalnajslab-org/TeensyEEPROM)<br>[SafeBuffer][...]
+| [End Control Unit (ECU)](https://github.com/kalnajslab-org/ECU) | [ECUcomm](https://github.com/kalnajslab-org/ECUcomm)<br>[RS41](https://github.com/kalnajslab-org/RS41) | TinyGPSPlus<br>WDT_T4<br>Lo[...]
 
 ### RACHUTS
 
 | Subsystem | kalnajslab-org Dependencies | External Dependencies |
 |---|---|---|
-| [Main Board](https://github.com/kalnajslab-org/StratoCore_RACHUTS) | [StratoCore](https://github.com/kalnajslab-org/StratoCore)<br>[StrateoleXML](https://github.com/kalnajslab-org/StrateoleXML)<br>[StratoLinduino](https://github.com/kalnajslab-org/StratoLinduino)<br>[MCBComm](https://github.com/kalnajslab-org/MCBComm)<br>[TeensyEEPROM](https://github.com/kalnajslab-org/TeensyEEPROM)<br>[SerialComm](https://github.com/kalnajslab-org/SerialComm)<br>[RPUComm](https://github.com/kalnajslab-org/RPUComm) | TinyGPSPlus<br>WDT_T4<br>LoRa |
-| [Reel Controller](https://github.com/kalnajslab-org/MCB_T4.1) | [MCBComm](https://github.com/kalnajslab-org/MCBComm)<br>[TeensyEEPROM](https://github.com/kalnajslab-org/TeensyEEPROM)<br>[SafeBuffer](https://github.com/kalnajslab-org/SafeBuffer)<br>[Technosoft](https://github.com/kalnajslab-org/Technosoft)<br>[Tsensor1Wire](https://github.com/kalnajslab-org/Tsensor1Wire)<br>[StratoLinduino](https://github.com/kalnajslab-org/StratoLinduino)<br>[SerialComm](https://github.com/kalnajslab-org/SerialComm) | TinyGPSPlus<br>WDT_T4 |
-| [Profiling Unit](https://github.com/kalnajslab-org/RPU) | [RPUComm](https://github.com/kalnajslab-org/RPUComm)<br>[SerialComm](https://github.com/kalnajslab-org/SerialComm)<br>[Tsensor1Wire](https://github.com/kalnajslab-org/Tsensor1Wire)<br>[RS41](https://github.com/kalnajslab-org/RS41) | TinyGPSPlus<br>WDT_T4<br>LoRa<br>Time<br>Embedded Template Library (ETL) |
+| [Main Board](https://github.com/kalnajslab-org/StratoCore_RACHUTS) | [StratoCore](https://github.com/kalnajslab-org/StratoCore)<br>[StrateoleXML](https://github.com/kalnajslab-org/StrateoleXML)<br>[[...]
+| [Reel Controller](https://github.com/kalnajslab-org/MCB_T4.1) | [MCBComm](https://github.com/kalnajslab-org/MCBComm)<br>[TeensyEEPROM](https://github.com/kalnajslab-org/TeensyEEPROM)<br>[SafeBuffer][...]
+| [Profiling Unit](https://github.com/kalnajslab-org/RPU) | [RPUComm](https://github.com/kalnajslab-org/RPUComm)<br>[SerialComm](https://github.com/kalnajslab-org/SerialComm)<br>[Tsensor1Wire](https:/[...]
 
 ## Reverse Dependencies
 
@@ -140,13 +141,13 @@ The inverse of the tables above: for each support library, the subsystems that n
 
 | Library | Used By |
 |---|---|
-| [StratoLinduino](https://github.com/kalnajslab-org/StratoLinduino) | [StratoCore_LPC](https://github.com/kalnajslab-org/StratoCore_LPC)<br>[PHA_V5_1](https://github.com/kalnajslab-org/PHA_V5_1)<br>[StratoCore_RATS](https://github.com/kalnajslab-org/StratoCore_RATS)<br>[MCB_T4.1](https://github.com/kalnajslab-org/MCB_T4.1)<br>[StratoCore_RACHUTS](https://github.com/kalnajslab-org/StratoCore_RACHUTS) |
-| [SerialComm](https://github.com/kalnajslab-org/SerialComm) | [StratoCore_RATS](https://github.com/kalnajslab-org/StratoCore_RATS)<br>[MCB_T4.1](https://github.com/kalnajslab-org/MCB_T4.1)<br>[StratoCore_RACHUTS](https://github.com/kalnajslab-org/StratoCore_RACHUTS)<br>[RPU](https://github.com/kalnajslab-org/RPU) |
-| [StratoCore](https://github.com/kalnajslab-org/StratoCore) | [StratoCore_LPC](https://github.com/kalnajslab-org/StratoCore_LPC)<br>[StratoCore_RATS](https://github.com/kalnajslab-org/StratoCore_RATS)<br>[StratoCore_RACHUTS](https://github.com/kalnajslab-org/StratoCore_RACHUTS) |
-| [StrateoleXML](https://github.com/kalnajslab-org/StrateoleXML) | [StratoCore_LPC](https://github.com/kalnajslab-org/StratoCore_LPC)<br>[StratoCore_RATS](https://github.com/kalnajslab-org/StratoCore_RATS)<br>[StratoCore_RACHUTS](https://github.com/kalnajslab-org/StratoCore_RACHUTS) |
+| [StratoLinduino](https://github.com/kalnajslab-org/StratoLinduino) | [StratoCore_LPC](https://github.com/kalnajslab-org/StratoCore_LPC)<br>[PHA_V5_1](https://github.com/kalnajslab-org/PHA_V5_1)<br>[[...]
+| [SerialComm](https://github.com/kalnajslab-org/SerialComm) | [StratoCore_RATS](https://github.com/kalnajslab-org/StratoCore_RATS)<br>[MCB_T4.1](https://github.com/kalnajslab-org/MCB_T4.1)<br>[Strato[...]
+| [StratoCore](https://github.com/kalnajslab-org/StratoCore) | [StratoCore_LPC](https://github.com/kalnajslab-org/StratoCore_LPC)<br>[StratoCore_RATS](https://github.com/kalnajslab-org/StratoCore_RATS[...]
+| [StrateoleXML](https://github.com/kalnajslab-org/StrateoleXML) | [StratoCore_LPC](https://github.com/kalnajslab-org/StratoCore_LPC)<br>[StratoCore_RATS](https://github.com/kalnajslab-org/StratoCore_[...]
 | [RS41](https://github.com/kalnajslab-org/RS41) | [StratoCore_LPC](https://github.com/kalnajslab-org/StratoCore_LPC)<br>[ECU](https://github.com/kalnajslab-org/ECU)<br>[RPU](https://github.com/kalnajslab-org/RPU) |
-| [MCBComm](https://github.com/kalnajslab-org/MCBComm) | [StratoCore_RATS](https://github.com/kalnajslab-org/StratoCore_RATS)<br>[MCB_T4.1](https://github.com/kalnajslab-org/MCB_T4.1)<br>[StratoCore_RACHUTS](https://github.com/kalnajslab-org/StratoCore_RACHUTS) |
-| [TeensyEEPROM](https://github.com/kalnajslab-org/TeensyEEPROM) | [StratoCore_RATS](https://github.com/kalnajslab-org/StratoCore_RATS)<br>[MCB_T4.1](https://github.com/kalnajslab-org/MCB_T4.1)<br>[StratoCore_RACHUTS](https://github.com/kalnajslab-org/StratoCore_RACHUTS) |
+| [MCBComm](https://github.com/kalnajslab-org/MCBComm) | [StratoCore_RATS](https://github.com/kalnajslab-org/StratoCore_RATS)<br>[MCB_T4.1](https://github.com/kalnajslab-org/MCB_T4.1)<br>[StratoCore_R[...]
+| [TeensyEEPROM](https://github.com/kalnajslab-org/TeensyEEPROM) | [StratoCore_RATS](https://github.com/kalnajslab-org/StratoCore_RATS)<br>[MCB_T4.1](https://github.com/kalnajslab-org/MCB_T4.1)<br>[St[...]
 | [ECUcomm](https://github.com/kalnajslab-org/ECUcomm) | [StratoCore_RATS](https://github.com/kalnajslab-org/StratoCore_RATS)<br>[ECU](https://github.com/kalnajslab-org/ECU) |
 | [RPUComm](https://github.com/kalnajslab-org/RPUComm) | [StratoCore_RACHUTS](https://github.com/kalnajslab-org/StratoCore_RACHUTS)<br>[RPU](https://github.com/kalnajslab-org/RPU) |
 | [Tsensor1Wire](https://github.com/kalnajslab-org/Tsensor1Wire) | [MCB_T4.1](https://github.com/kalnajslab-org/MCB_T4.1)<br>[RPU](https://github.com/kalnajslab-org/RPU) |
