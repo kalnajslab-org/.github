@@ -61,6 +61,7 @@ GitHub Organization for the LASP Kalnajs Team.
 | [KalCloud](https://github.com/kalnajslab-org/KalCloud) _(private)_ | Cloud infrastructure for real-time system monitoring, messaging, data processing, and product distribution |
 | [KalCloudGrafana](https://github.com/kalnajslab-org/KalCloudGrafana) _(private)_ | Repoistory for just the grafana dashboards. Keep separate for finer write access control |
 | [datapipe_strat](https://github.com/kalnajslab-org/datapipe_strat) _(private)_ | Data pipeline for Stratéole 2 system |
+| [datapipe_test_rig](https://github.com/kalnajslab-org/datapipe_test_rig) _(private)_ | Data pipeline for test rig system |
 
 ### Hardware
 
@@ -116,7 +117,7 @@ Each row's Subsystem links to that subsystem's own repository; the dependency co
 
 | Subsystem | kalnajslab-org Dependencies | External Dependencies |
 |---|---|---|
-| [Main Board](https://github.com/kalnajslab-org/StratoCore_LPC) | [StratoCore](https://github.com/kalnajslab-org/StratoCore)<br>[StrateoleXML](https://github.com/kalnajslab-org/StrateoleXML)<br>[Stra[...]
+| [Main Board](https://github.com/kalnajslab-org/StratoCore_LPC) | [StratoCore](https://github.com/kalnajslab-org/StratoCore)<br>[StrateoleXML](https://github.com/kalnajslab-org/StrateoleXML)<br>[...]
 | [Particle Counter](https://github.com/kalnajslab-org/PHA_V5_1) | [StratoLinduino](https://github.com/kalnajslab-org/StratoLinduino) | TinyGPSPlus |
 
 ### RATS
@@ -143,9 +144,9 @@ The inverse of the tables above: for each support library, the subsystems that n
 |---|---|
 | [StratoLinduino](https://github.com/kalnajslab-org/StratoLinduino) | [StratoCore_LPC](https://github.com/kalnajslab-org/StratoCore_LPC)<br>[PHA_V5_1](https://github.com/kalnajslab-org/PHA_V5_1)<br>[[...]
 | [SerialComm](https://github.com/kalnajslab-org/SerialComm) | [StratoCore_RATS](https://github.com/kalnajslab-org/StratoCore_RATS)<br>[MCB_T4.1](https://github.com/kalnajslab-org/MCB_T4.1)<br>[Strato[...]
-| [StratoCore](https://github.com/kalnajslab-org/StratoCore) | [StratoCore_LPC](https://github.com/kalnajslab-org/StratoCore_LPC)<br>[StratoCore_RATS](https://github.com/kalnajslab-org/StratoCore_RATS[...]
-| [StrateoleXML](https://github.com/kalnajslab-org/StrateoleXML) | [StratoCore_LPC](https://github.com/kalnajslab-org/StratoCore_LPC)<br>[StratoCore_RATS](https://github.com/kalnajslab-org/StratoCore_[...]
-| [RS41](https://github.com/kalnajslab-org/RS41) | [StratoCore_LPC](https://github.com/kalnajslab-org/StratoCore_LPC)<br>[ECU](https://github.com/kalnajslab-org/ECU)<br>[RPU](https://github.com/kalnajslab-org/RPU) |
+| [StratoCore](https://github.com/kalnajslab-org/StratoCore) | [StratoCore_LPC](https://github.com/kalnajslab-org/StratoCore_LPC)<br>[StratoCore_RATS](https://github.com/kalnajslab-org/StratoCore[...]
+| [StrateoleXML](https://github.com/kalnajslab-org/StrateoleXML) | [StratoCore_LPC](https://github.com/kalnajslab-org/StratoCore_LPC)<br>[StratoCore_RATS](https://github.com/kalnajslab-org/Strato[...]
+| [RS41](https://github.com/kalnajslab-org/RS41) | [StratoCore_LPC](https://github.com/kalnajslab-org/StratoCore_LPC)<br>[ECU](https://github.com/kalnajslab-org/ECU)<br>[RPU](https://github.com/kalnaj[...]
 | [MCBComm](https://github.com/kalnajslab-org/MCBComm) | [StratoCore_RATS](https://github.com/kalnajslab-org/StratoCore_RATS)<br>[MCB_T4.1](https://github.com/kalnajslab-org/MCB_T4.1)<br>[StratoCore_R[...]
 | [TeensyEEPROM](https://github.com/kalnajslab-org/TeensyEEPROM) | [StratoCore_RATS](https://github.com/kalnajslab-org/StratoCore_RATS)<br>[MCB_T4.1](https://github.com/kalnajslab-org/MCB_T4.1)<br>[St[...]
 | [ECUcomm](https://github.com/kalnajslab-org/ECUcomm) | [StratoCore_RATS](https://github.com/kalnajslab-org/StratoCore_RATS)<br>[ECU](https://github.com/kalnajslab-org/ECU) |
