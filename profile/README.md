@@ -43,25 +43,14 @@ GitHub Organization for the LASP Kalnajs Team.
 | [TeleCommands](https://github.com/kalnajslab-org/TeleCommands) | Python tool for generating telecommands for LPC, RACHUTS, and FLOATS instruments |
 | [LPC-Analysis](https://github.com/kalnajslab-org/LPC-analysis.git) | Proto-Python Script for plotting LPC data|
 
-### Obsolete
-
-| Repository | Description |
-|---|---|
-| [MCB](https://github.com/kalnajslab-org/MCB) | Motor Control Board firmware for the RACHUTS MonDo reel board |
-| [PUCode](https://github.com/kalnajslab-org/PUCode) | 1st generation firmware for the RACHuTS profiling unit, and the communications protocol between the Profiling Unit and RACHUTS. Replaced by [RPU][...]
-| [OBC_Simulator](https://github.com/kalnajslab-org/OBC_Simulator) | On-board computer simulator for ground testing of Stratéole 2 instruments |
-| [SerialComm-LarsObsolete](https://github.com/kalnajslab-org/SerialComm-LarsObsolete) | Obsolete version of SerialComm, retained for reference |
-| [TMdecoder](https://github.com/kalnajslab-org/TMdecoder) | Decoder for LASP instrument telemetry streams |
-| [StratoCore_FLOATS](https://github.com/kalnajslab-org/StratoCore_FLOATS) | Main board application for the FLOATS instrument |
-
 ### Cloud
 
 | Repository                                                         | Description                                                                                                |
 | ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
 | [KalCloud](https://github.com/kalnajslab-org/KalCloud) _(private)_ | Cloud infrastructure for real-time system monitoring, messaging, data processing, and product distribution |
 | [KalCloudGrafana](https://github.com/kalnajslab-org/KalCloudGrafana) _(private)_ | Repoistory for just the grafana dashboards. Keep separate for finer write access control |
-| [datapipe_strat](https://github.com/kalnajslab-org/datapipe_strat) _(private)_ | Data pipeline for Stratéole 2 system |
-| [datapipe_test_rig](https://github.com/kalnajslab-org/datapipe_test_rig) _(private)_ | Data pipeline for test rig system |
+| [datapipe_strat](https://github.com/kalnajslab-org/datapipe_strat) _(private)_ | Data pipeline for Stratéole 2 system, for processing TMs |
+| [datapipe_test_rig](https://github.com/kalnajslab-org/datapipe_test_rig) _(private)_ | Data pipeline for test rig system, to simulate active flights and TMs |
 
 ### Hardware
 
@@ -109,7 +98,18 @@ development environments. Note that we have since migrated exclusively to Platfo
 
 More [ArduinoIDE details](#arduinoide) and [PlatformIO details](#platformio) are found below.
 
-## Repositories Dependencies
+### Obsolete
+
+| Repository | Description |
+|---|---|
+| [MCB](https://github.com/kalnajslab-org/MCB) | Motor Control Board firmware for the RACHUTS MonDo reel board |
+| [PUCode](https://github.com/kalnajslab-org/PUCode) | 1st generation firmware for the RACHuTS profiling unit, and the communications protocol between the Profiling Unit and RACHUTS. Replaced by [RPU][...]
+| [OBC_Simulator](https://github.com/kalnajslab-org/OBC_Simulator) | On-board computer simulator for ground testing of Stratéole 2 instruments |
+| [SerialComm-LarsObsolete](https://github.com/kalnajslab-org/SerialComm-LarsObsolete) | Obsolete version of SerialComm, retained for reference |
+| [TMdecoder](https://github.com/kalnajslab-org/TMdecoder) | Decoder for LASP instrument telemetry streams |
+| [StratoCore_FLOATS](https://github.com/kalnajslab-org/StratoCore_FLOATS) | Main board application for the FLOATS instrument |
+
+## Repository Dependencies
 
 Each row's Subsystem links to that subsystem's own repository; the dependency columns list what it depends on, so the subsystem's own repository is not repeated there.
 
