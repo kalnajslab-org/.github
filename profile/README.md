@@ -34,14 +34,15 @@ GitHub Organization for the LASP Kalnajs Team.
 | [StratoLinduino](https://github.com/kalnajslab-org/StratoLinduino) | Hardware support files cherry-picked from the ADI Linduino repository |
 | [Technosoft](https://github.com/kalnajslab-org/Technosoft) | Interface library for Technosoft motor controllers |
 
-### Ground Support Software
+### Ground Support Software and General Purpose Libraries
 
 | Repository | Description |
 |---|---|
 | [ZephyrSim](https://github.com/kalnajslab-org/ZephyrSim) | Upgraded OBC_Simulator (Qt6) tool for simulating CNES Zephyr OBC communications |
 | [TMmonster](https://github.com/kalnajslab-org/TMmonster) | TM decoder tool, the Swiss Army Knife of TM decoding |
 | [TeleCommands](https://github.com/kalnajslab-org/TeleCommands) | Python tool for generating telecommands for LPC, RACHUTS, and FLOATS instruments |
-| [LPC-Analysis](https://github.com/kalnajslab-org/LPC-analysis.git) | Proto-Python Script for plotting LPC data|
+| [LPC-Analysis](https://github.com/kalnajslab-org/LPC-analysis.git) | Proto-Python Script for plotting LPC data |
+| [RATCHuTS-Analysis](https://github.com/kalnajslab-org/RACHuTS-analysis) | Plotting and analysis code for RACHuTS TMS |
 
 ### Cloud
 
@@ -49,7 +50,6 @@ GitHub Organization for the LASP Kalnajs Team.
 | ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
 | [KalCloud](https://github.com/kalnajslab-org/KalCloud) _(private)_ | Cloud infrastructure for real-time system monitoring, messaging, data processing, and product distribution |
 | [KalCloudGrafana](https://github.com/kalnajslab-org/KalCloudGrafana) _(private)_ | Repoistory for just the grafana dashboards. Keep separate for finer write access control |
-| [datapipe_strat](https://github.com/kalnajslab-org/datapipe_strat) _(private)_ | Data pipeline for Stratéole 2 system, for processing TMs |
 | [datapipe_test_rig](https://github.com/kalnajslab-org/datapipe_test_rig) _(private)_ | Data pipeline for test rig system, to simulate active flights and TMs |
 
 ### Hardware
@@ -74,7 +74,8 @@ GitHub Organization for the LASP Kalnajs Team.
 | [LopcCncPlugin](https://github.com/kalnajslab-org/LopcCncPlugin) | Skysonde Client plugin for the LOPC/CNC instrument |
 | [HiStac2Plugin](https://github.com/kalnajslab-org/HiStac2Plugin) | Plugin for the HiStac2 instrument interface |
 
-### Obsolete
+### Archived
+Repositories which have been replaced by other code bases, but kept alive for reference.
 
 | Repository | Description |
 |---|---|
@@ -84,6 +85,7 @@ GitHub Organization for the LASP Kalnajs Team.
 | [SerialComm-LarsObsolete](https://github.com/kalnajslab-org/SerialComm-LarsObsolete) | Obsolete version of SerialComm, retained for reference |
 | [TMdecoder](https://github.com/kalnajslab-org/TMdecoder) | Decoder for LASP instrument telemetry streams |
 | [StratoCore_FLOATS](https://github.com/kalnajslab-org/StratoCore_FLOATS) | Main board application for the FLOATS instrument |
+| [datapipe_strat](https://github.com/kalnajslab-org/datapipe_strat) _(private)_ | Data pipeline for Stratéole 2 system, for processing TMs. This repo was for prototyping the datapipe. It has been migrated to `KalCloud.datapipe/` |
 
 ## Teensy Firmware Quickstart
 
