@@ -41,6 +41,7 @@ GitHub Organization for the LASP Kalnajs Team.
 | [ZephyrSim](https://github.com/kalnajslab-org/ZephyrSim) | Upgraded OBC_Simulator (Qt6) tool for simulating CNES Zephyr OBC communications |
 | [TMmonster](https://github.com/kalnajslab-org/TMmonster) | TM decoder tool, the Swiss Army Knife of TM decoding |
 | [TeleCommands](https://github.com/kalnajslab-org/TeleCommands) | Python tool for generating telecommands for LPC, RACHUTS, and FLOATS instruments |
+| [TeleCommander](https://github.com/kalnajslab-org/Telecommander.git) | Updated Browser tool for generating telecommands for LPC, RACHUTS, and RATS |
 | [LPC-Analysis](https://github.com/kalnajslab-org/LPC-analysis.git) | Proto-Python Script for plotting LPC data |
 | [RATCHuTS-Analysis](https://github.com/kalnajslab-org/RACHuTS-analysis) | Plotting and analysis code for RACHuTS TMS |
 
