@@ -309,3 +309,69 @@ multiple Teensies plugged in.
 
 Just make sure that you have the correct one chosen, otherwise you may flash the MCB
 with the StratoCore_LPC code and vice versa!
+
+### The State of Apple Silicon on PlatformIO: Teensy & Arduino Ecosystem
+
+This document tracks why PlatformIO relies on the Rosetta 2 translation layer when developing for **Teensy** and **Arduino** on Apple Silicon (`darwin_arm64`), the underlying limitations, and the configurations required to bypass Rosetta completely. This problem appeared when upgrading to MacOS 27 (Golden Gate). **Fortunately, you can easily install `Rosetta` on this version of MacOS.** But the future is uncertain.
+
+---
+
+#### 1. The Core Issue: Upstream Toolchains & Fallbacks
+
+PlatformIO Core itself is built on Python and can execute natively on Apple Silicon. However, compiling embedded code requires micro-architecture cross-compilers (e.g., `arm-none-eabi-gcc`). 
+
+When PlatformIO attempts to resolve dependencies for your hardware, two failure points occur:
+1. **The Fallback Mechanism:** If the PlatformIO Package Registry lacks a package specifically tagged for `darwin_arm64`, it silently drops back to fetching the `darwin_x86_64` (Intel) version.
+2. **Missing Binary Architecture:** Without Rosetta 2 installed to dynamically translate those x86 instructions, running a build throws a immediate system error:
+   ```bash
+   bad CPU type in executable
+   ```
+
+---
+
+#### 2. Current State of Play (Teensy & Arduino)
+
+###### Teensy (`platform = teensy`)
+The default toolchain distributed by the official PlatformIO registry for Teensy development has lagged behind in publishing native `darwin_arm64` cross-compilers. While the Arduino IDE has taken steps toward universal compatibility, legacy packages assigned to the Teensy PlatformIO pipeline (like `toolchain-gccarmnoneeabi`) still default to older, Intel-only iterations.
+
+### Standard Arduino Frameworks
+Depending on the specific board family (AVR, SAMD, STM32, or ESP32), you are at the mercy of whether the vendor or PlatformIO maintainers uploaded a native ARM64 package variant to the registry. 
+
+---
+
+#### 3. Verified Workarounds for Rosetta-Free Operation
+
+If you are setting up a machine entirely without Rosetta 2, you must force PlatformIO to map clean, native compilation paths.
+
+##### Fix A: Force a Native ARM Cross-Compiler
+In the [PlatformIO Community Forums](https://community.platformio.org/t/fresh-pio-install-on-apple-silicon/53994) and core issue tracking, users successfully fixed the ARM64 compilation block by explicitly pinning a modern, natively compiled toolchain version inside their project's `platformio.ini` file.
+
+Add the `platform_packages` directive inside your environment configuration to bypass the default registry fallback:
+
+```ini
+[env:teensy41]
+platform = teensy
+board = teensy41
+framework = arduino
+
+; Force PlatformIO to use a verified native ARM64 toolchain package
+platform_packages =
+    platformio/toolchain-gccarmnoneeabi@^1.140201.0
+```
+
+##### Fix B: Sever Built-In Intel Dependencies
+PlatformIO occasionally drops an isolated x86_64 Python virtual environment behind the scenes inside your home directory wrapper. To guarantee VS Code triggers your local host's native resources, toggle off the bundle execution rules.
+
+Modify your global VS Code `settings.json`:
+```json
+"platformio-ide.useBuiltinPython": false
+```
+
+##### Fix C: Install Core Assets Through Homebrew
+Instead of letting the VS Code extension script fetch and install the PlatformIO Core CLI engine (which can inadvertently request Intel-packaged assets), rely on macOS’s native packet utility:
+
+```bash
+# Ensure your Homebrew tree is clean and native
+brew install platformio
+```
+Once installed via Homebrew, point your VS Code PlatformIO extension to utilize the global system tool paths instead of its default sandboxed environment folder (`~/.platformio/penv`).
