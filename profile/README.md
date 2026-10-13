@@ -1,4 +1,4 @@
-# Kalnaslab-org
+# Kalnajslab-org
 GitHub Organization for the LASP Kalnajs Team.
 
 [All Repositories](https://github.com/orgs/kalnajslab-org/repositories)
