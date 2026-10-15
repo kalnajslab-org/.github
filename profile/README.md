@@ -17,6 +17,7 @@ GitHub Organization for the LASP Kalnajs Team.
 | [RPU](https://github.com/kalnajslab-org/RPU) | RACHuTS profiling unit |
 | [MCB_T4.1](https://github.com/kalnajslab-org/MCB_T4.1) | Motor Control Board firmware for RATS/RACHUTS, updated for Teensy 4.1 |
 | [RS41](https://github.com/kalnajslab-org/RS41) | Support library for the Vaisala RSS421 radiosonde |
+| [TDLAS](https://github.com/kalnajslab-org/TDLAS) _(private)_ | Lab firmware for the TDLAS |
 
 ### Core Firmware Libraries
 
