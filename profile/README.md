@@ -43,7 +43,7 @@ GitHub Organization for the LASP Kalnajs Team.
 | [TMmonster](https://github.com/kalnajslab-org/TMmonster) | TM decoder tool, the Swiss Army Knife of TM decoding |
 | [LPC-Analysis](https://github.com/kalnajslab-org/LPC-analysis.git) | Proto-Python Script for plotting LPC data |
 | [RATCHuTS-Analysis](https://github.com/kalnajslab-org/RACHuTS-analysis) | Plotting and analysis code for RACHuTS TMS |
-| [LoraScope](https://github.com/kalnajslab-org/LoraScope) |Live LoRa packet listener, decoder, and display|
+| [LoScope](https://github.com/kalnajslab-org/LoScope) |Live LoRa packet listener, decoder, and display|
 
 ### Cloud
 
